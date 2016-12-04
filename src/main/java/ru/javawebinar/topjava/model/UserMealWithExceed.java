@@ -15,10 +15,20 @@ public class UserMealWithExceed {
 
     private final boolean exceed;
 
+    private volatile int  id;
+
     public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
         this.exceed = exceed;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
