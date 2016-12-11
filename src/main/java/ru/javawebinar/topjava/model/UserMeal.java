@@ -15,8 +15,6 @@ public class UserMeal {
 
     private final int calories;
 
-    private volatile int  id;
-
     public UserMeal(LocalDateTime dateTime, String description, int calories) {
         this.dateTime = dateTime;
         this.description = description;
@@ -35,19 +33,4 @@ public class UserMeal {
         return calories;
     }
 
-    public LocalDate getDate() {
-        return dateTime.toLocalDate();
-    }
-
-    public LocalTime getTime() {
-        return dateTime.toLocalTime();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }
